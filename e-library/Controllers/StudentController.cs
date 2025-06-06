@@ -23,8 +23,7 @@ namespace e_library.Controllers
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        [HttpPost]
-        [Route("register")]
+        
         public async Task<ActionResult<Student>> RegisterStudent([FromBody] Student model)
         {
             //do code here
@@ -36,8 +35,7 @@ namespace e_library.Controllers
         /// <param name="studentId"></param>
         /// <param name="bookId"></param>
         /// <returns></returns>
-        [HttpPut]
-        [Route("issuebook/{studentId}/{bookId}")]
+        
         public async Task<ActionResult<bool>> IssueNewBook(int studentId, int bookId)
         {
             //do code here
@@ -49,8 +47,7 @@ namespace e_library.Controllers
         /// <param name="studentId"></param>
         /// <param name="bookId"></param>
         /// <returns></returns>
-        [HttpPut]
-        [Route("returnbook/{studentId}/{bookId}")]
+        
         public async Task<ActionResult<bool>> ReturnBook(int studentId, int bookId)
         {
             //do code here
@@ -61,8 +58,7 @@ namespace e_library.Controllers
         /// </summary>
         /// <param name="studentId"></param>
         /// <returns></returns>
-        [HttpGet]
-        [Route("studentissuebooks/{studentId}")]
+       
         public async Task<IEnumerable<Book>> GetAllIssuedBooksByStudent(int studentId)
         {
             //do code here
