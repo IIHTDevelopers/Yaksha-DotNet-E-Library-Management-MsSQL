@@ -24,8 +24,7 @@ namespace e_library.Controllers
         /// Get all issued book
         /// </summary>
         /// <returns></returns>
-        [HttpGet]
-        [Route("issuedbook")]
+        
         public async Task<IEnumerable<Book>> IssuedBook()
         {
             return await _libraryServices.IssuedBook();
@@ -35,8 +34,7 @@ namespace e_library.Controllers
         /// </summary>
         /// <param name="streams"></param>
         /// <returns></returns>
-        [HttpGet]
-        [Route("bookbystream/{streams}")]
+        
         public async Task<IEnumerable<Book>> GetAllBookByStream(Streams streams)
         {
             //do code here
@@ -47,8 +45,7 @@ namespace e_library.Controllers
         /// </summary>
         /// <param name="studentId"></param>
         /// <returns></returns>
-        [HttpGet]
-        [Route("bookbystudentId/{studentId}")]
+       
         public async Task<IEnumerable<Book>> GetAllBooksByStudentStream(int studentId)
         {
             //do code here
@@ -59,8 +56,7 @@ namespace e_library.Controllers
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        [HttpPost]
-        [Route("addbook")]
+        
         public async Task<ActionResult<Book>> AddNewBook([FromBody] Book model)
         {
             //do code here
@@ -70,8 +66,7 @@ namespace e_library.Controllers
         /// Get all book with fine.
         /// </summary>
         /// <returns></returns>
-        [HttpGet]
-        [Route("finedbook")]
+       
         public async Task<IEnumerable<Book>> GetAllBookWithFine()
         {
             //do code here
